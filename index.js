@@ -49,11 +49,7 @@ cloudinary.cloudinaryConnect();
 
 
 
-app.get("/", (req,res)=>{
-    res.render('header', {
-        title:"Home Page"
-    })
-})
+app.get("/", require("./routes/home"))
 
 app.listen(port , (err)=>{
     if (err){console.log(`error in listenning to port `);}

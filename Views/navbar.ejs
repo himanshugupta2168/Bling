@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="./css/navbar.css">
+<nav class="width-full">
+    <div id="logo-section">
+        <a href="http://">
+            <h3 id="logo-main">Bling</h3><span> <h5 id="logo-slogan">The new Age social media </h5></span>
+        </a>
+    </div>
+    <div id="user-section">
+        <div id="search">
+            <div id="search-container">
+                <form action="">
+                    <input type="text" name="" id="search-text" placeholder="Search.....">
+                    <input type="submit" value="Search" id="search-button">
+                </form>
+            </div>
+        </div>
+        <% if (locals.user){ %>
+            <a href="/user/profile">
+                <div id="user-profile">
+                    <img src="" alt="profile image">
+                </div>
+            </a>
+        <% }else{%>
+            <div class="sessions">
+                <a href="" ><button id="login">Sign Up</button></a>
+                <a href="" > <button id="login">Login Now </button></a>
+            </div>
+        <% } %>
+    </div>
+</nav>

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Ubuntu&display=swap');
+/* font-family: 'Kenia', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#width-full{
+    position: relative;
+    width: 100%;
+}
+
+#logo-section a{
+    text-decoration: none;
+    display: flex;
+    align-items:baseline;
+    gap: 20PX;
+}
+
+
+/* logo section */
+
+.width-full{
+    background-color: #456DFB;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 4vw;
+}
+#logo-main{
+    font-family: 'Kenia', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+#logo-slogan{
+    font-size: 23px;
+    color: white;
+    font-family: 'Edu TAS Beginner', cursive;
+    letter-spacing: -1;
+}
+/* user profile */
+#user-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+#search{
+    width: 33vh;
+    height: 30px;
+    position: relative;
+}
+#search-container{
+    gap:0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#search-text{
+    width: 60%;
+    height: 100%;
+    outline: none;
+    background-color:inherit;
+    border:none;
+    border-bottom: 1px solid black;
+    color: white;
+}
+#search-text::placeholder{
+    color: white;
+}
+#search-button{
+    width: 100px;
+    height: 90%;
+    background-color:  #34C759 ;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#search-button:hover{
+    scale: 1.1;
+    transition-duration: 700ms;
+}
+
+#user-profile{
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 50% ;
+}
+
+.sessions a{
+    margin: 5px;
+}
+.sessions a button{
+    width: 100px;
+    height: 40px;
+}
+#login{
+    background-color:#E0E0E0;
+    border-radius:10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+#login:hover{
+    scale: 1.1;
+    transition-duration: 500ms;
+}
+

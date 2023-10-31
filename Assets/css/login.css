@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login-wrapper{
+    background-color: #456DFB;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+#login-image{
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+#login-image img{
+    width: 100%;
+
+    height: 80%;
+    background-size: auto;
+    border-radius: 20%;
+}
+/* login setion - right form side  */
+#login-section{
+    width: 30%;
+    height: 100%;
+}
+#login-section h1{
+    color: white;
+    position: absolute;
+    top: 14%;
+    right: 8%;
+}
+#login-container{
+    margin: 0 10%;
+    background-color: white;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 25vh;
+}
+#login-container form {
+    padding: 5%;
+}
+.credentials {
+    width: 100%;
+    height: 5vh;
+    margin: 5% 0;   
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+#link{
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#link a{
+    text-decoration: none;
+    /* color: white; */
+}
+#sign-in{
+    color: #456DFB;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}
+#fpwd{
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}
+.login-btn{
+    background-color: #456DFB;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+.login-btn:hover{
+    transform: scaleY(1.1);
+    opacity:.9;
+    transition-duration: 700ms;
+}
