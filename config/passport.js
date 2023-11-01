@@ -25,7 +25,7 @@ passport.use(new LocalStrategy({
 
 //  keeping the user id in the cookies f the user 
 passport.serializeUser (function(user, done){
-    return done(nulll, user.id);
+    return done(null, user.id);
 });
 
 //  remob=ving the user id from the cookies of the user 
