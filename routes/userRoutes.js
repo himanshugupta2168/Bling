@@ -12,7 +12,7 @@ router.post("/signup/create", userController.create)
 
 
 
-router.get('/login',userController.signin);
+router.get('/login', userController.signin);
 router.post("/login/createsession",passport.authenticate(
     'local',
     {

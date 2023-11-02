@@ -36,7 +36,6 @@ app.use(expressSession({
     }
     )
 }));
-
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
