@@ -34,3 +34,11 @@ module.exports.create = async(req, res)=>{
         console.log("error in Signing up a  a new user ", err);
     }
 }
+module.exports.destroySession = async(req, res)=>{
+    req.logout(function(err){
+        if (err){
+            return next(err);
+        }
+        return res.redirect("/")
+    });
+}

@@ -1,6 +1,9 @@
 const passport = require("passport");
 const User = require("../models/userSchema")
 const LocalStrategy = require("passport-local").Strategy;
+require("dotenv").config();
+const saltRounds = parseInt(process.env.SALT_ROUNDS);
+const bcrypt= require("bcrypt")
 
 
 
@@ -10,11 +13,20 @@ passport.use(new LocalStrategy({
     async function(email , password , done ){
         try{
             const user = await User.findOne({email:email});
-            if (!user|| user.password!= password){
-                console.log("INvalid Credentials ");
+            // console.log(user);
+            if (!user) {
+                console.log("User not found");
                 return done(null, false);
+              }
+            const result = await bcrypt.compare(password, user.password);
+            // console.log("result value --->>", result);
+            if (!user || result== false){
+                console.log("Invalid Credentials ");
+                return done(null,false);
             }
-            return done (null, user );
+            else{
+                return done (null, user );
+            }
         }
         catch(err){
             console.log("error in validting the credentials ");
