@@ -4,7 +4,7 @@ const userRoutes= require("./userRoutes")
 
 
 router.get("/",(req, res)=>{
-    res.render('navbar', {
+    res.render('home', {
         // title:"Home Page"
     })
 });

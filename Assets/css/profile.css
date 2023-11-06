@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 99vw;
+    height: 80%;
+    position: relative;
+    display: flex;
+    padding: 30px 62px;
+    justify-content: space-between;
+}
+.left-profile{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+.profileImage{
+    width: 200px;
+    height: 200px;
+    /* border:1px solid black; */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.profileImage img{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.updateButtons{
+    margin-top: 18px;
+    width: 300px;
+    height: 50px;
+    background-color:#456DFB ;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    font-style: normal;
+    cursor: pointer;
+}
+.right-profile{
+    width: calc(99vh -20%);
+    height: 90%;
+    position: relative;
+    flex-shrink: 1;
+    word-wrap: break-word;
+}
+.informations{
+    width:40vw;
+    height: 30vh;
+    background-color: #D9D9D9;
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+.updateDetails{
+    position: absolute;
+    bottom:18%;
+    right: 0;
+}
+.deleteAccountButton{
+    position:absolute;
+    bottom:35%;
+    right:0;
+}

@@ -1,0 +1,25 @@
+<%- include('navbar') %>
+<link rel="stylesheet" href="/css/profile.css">
+<div class="wrapper">
+    <div class="left-profile">
+        <div class="profileImage">
+            <img src="/Images/defaultProfile.png" alt="ProfileImage" srcset="">
+        </div>
+        <div class="update-profileImage">
+            <a href=""><button class="updateButtons">Update Profile Picture</button></a>
+        </div>
+    </div>
+    <div class="right-profile">
+        <div class="informations">
+            <p><b> User Id : </b> <%= user.id  %></p>
+            <p><b>Name : </b><%= user.name  %></p>
+            <p><b>Email : </b><%=  user.email%></p>
+            <p><b>Joined On : </b><%= user.createdAt%> </p>
+        </div>
+        <a href=""><button class="updateButtons updateDetails">Update Details</button></a>
+        <a href=""><button class="updateButtons deleteAccountButton">Delete Account</button></a>
+    </div>
+</div>
+<div class="wrapper">
+    <h1>Posts</h1>
+</div>

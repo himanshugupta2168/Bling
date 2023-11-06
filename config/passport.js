@@ -20,12 +20,12 @@ passport.use(new LocalStrategy({
               }
             const result = await bcrypt.compare(password, user.password);
             // console.log("result value --->>", result);
-            if (!user || result== false){
+            if (!result){
                 console.log("Invalid Credentials ");
                 return done(null,false);
             }
             else{
-                return done (null, user );
+                return done (null, user);
             }
         }
         catch(err){
@@ -43,7 +43,7 @@ passport.serializeUser (function(user, done){
 //  remob=ving the user id from the cookies of the user 
 passport.deserializeUser (async function (id , done ){
     try{
-        const user = User.findById(id);
+        const user =await  User.findById(id);
         if(!user){
             return done(null, false);
         }

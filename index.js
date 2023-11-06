@@ -10,7 +10,7 @@ const passportLocal = require("./config/passport")
 const mongoStore = require("connect-mongo");
 const cookieParser = require("cookie-parser")
 const expressSession =require("express-session")
-
+const flash = require("connect-flash")
 
 app.set('view engine', 'ejs');
 app.set('views', "./Views");
@@ -36,6 +36,7 @@ app.use(expressSession({
     }
     )
 }));
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);

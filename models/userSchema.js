@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
         ref:"Post",
     }],
 
-})
+}, {timestamps:true})
 userSchema.pre('save', function(next) {
     const user = this;
   

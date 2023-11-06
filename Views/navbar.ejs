@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/navbar.css">
+<link rel="stylesheet" href="/css/navbar.css">
 <nav class="width-full">
     <div id="logo-section">
         <a href="/">
@@ -16,11 +16,11 @@
         </div>
         <% if (locals.user){ %>
                 <div id="user-profile">
-                    <img src="" alt="profile image">
+                    <img src="/Images/defaultProfile.png" alt="profile image">
                 </div>
                 <div id="loggedIn-links" class="hidden loggedIn-links">
                     <ul>
-                        <li class="" ><a href="" class="loggedLink">Profile</a></li>
+                        <li class="" ><a href="/users/profile" class="loggedLink">Profile</a></li>
                         <li ><a href="/users/logout" class="loggedLink">Log out Now </a></li>
                     </ul>
                 </div>
@@ -32,4 +32,4 @@
         <% } %>
     </div>
 </nav>
-<script src="./scripts/navbarScript.js"></script>
+<script src="/scripts/navbarScript.js"></script>

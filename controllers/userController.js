@@ -42,3 +42,8 @@ module.exports.destroySession = async(req, res)=>{
         return res.redirect("/")
     });
 }
+
+
+module.exports.profile = async (req, res)=>{
+    return res.render("userProfile")
+}
