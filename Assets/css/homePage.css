@@ -1,0 +1,84 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    padding: 0 2vw;
+    /* gap: 10px; */
+    /* overflow-x: hidden; */
+}
+.static {
+    width: 324px;
+    height: 209px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #D9D9D9;
+    padding: 2vh;
+    position: sticky;
+    top: 2vw;
+    flex-shrink: 1;
+}
+.scrollable {
+    margin:  0 auto;
+    width: 600px;
+    height: auto;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    position: relative;
+    flex-shrink:1;
+}
+.multimedia {
+    display: flex;
+    gap: 20px;
+}
+.scrollable label span{
+    width: 40px;
+}
+.multimedia button{
+    width: 100px;
+    position: absolute;
+    right: 20px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: #456DFB;
+    border: none;
+    bottom:15px;
+}
+.posted{
+    padding: 0 2vw;
+    margin: 2vh 0;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+    flex-shrink: 1;
+}
+.heading img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-size: contain;
+}
+.postedImage{
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+}
+.actions{
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+.actions a{
+    width: 50%;
+    height: 30px;
+  
+}
+.actions a button{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}

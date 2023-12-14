@@ -1,2 +1,42 @@
 <%- include('header.ejs') %>
 <%- include('navbar.ejs') %>
+<link rel="stylesheet" href="/css/homePage.css" class="css">
+<div class="wrapper">
+    <% if (locals.user){ %>
+        <div class="static">
+            <form action="/posts/create" enctype="multipart/form-data" method="post">
+                <textarea name="content" id="" cols="30" rows="8" placeholder="What's on your Mind??? " required  style="resize: none;"></textarea>
+                <div class="multimedia">
+                    <label for="image"><span class="iconify" data-icon="ph:images-square-thin" data-width="40" style="color: #456dfb;"></span></label>
+                    <input type="file" name="image" id="image" hidden>
+                     <button type="submit">POST..</button>
+                </div>
+            </form>
+        </div>
+    <% } %>
+    <div class="scrollable">
+        <% for (let post of Posts) {%>
+            <div class="posted">
+                <div class="heading">
+                    <img src="/Images/Bling-logo.png" alt="ProfileImage">
+                    <h4><%= post.user.name %></h4>
+                </div>
+                <div class="content">
+                    <p><%= post.content %></p>
+                    <% if (post.postImage) {%>
+                        <img src="<%= post.postImage %>" alt="posted Image" class="postedImage">
+                    <% } %>
+                    <img src="./Images/Bling-logo.png" alt="posted Image" class="postedImage">
+                </div>
+                <div class="actions">
+                    <a href="/like/<%= post.id %>">
+                        <button><span class="iconify" data-icon="tdesign:star-filled"></span>Like</button>
+                    </a>
+                    <a href="/comments/<%= post.id%>">
+                        <button><span class="iconify" data-icon="bx:comment"></span>Comment</button>
+                    </a>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

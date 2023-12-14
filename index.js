@@ -11,11 +11,14 @@ const mongoStore = require("connect-mongo");
 const cookieParser = require("cookie-parser")
 const expressSession =require("express-session")
 const flash = require("connect-flash")
+const fileUplaod = require("express-fileupload")
 
 app.set('view engine', 'ejs');
 app.set('views', "./Views");
 
-app.use (express.urlencoded());
+app.use (express.urlencoded({
+    extended:false,
+}));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(__dirname+"/Assets"))
@@ -25,7 +28,7 @@ app.use(expressSession({
     saveUninitialized:false,
     resave:false,
     cookie:{
-        maxAge:(1000*60*10)
+        maxAge:(1000*60*60)
     },
     store:mongoStore.create({
         mongoUrl:process.env.MONGODB_URL,
@@ -40,6 +43,10 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
+app.use(fileUplaod({
+    useTempFiles:true,
+    tempFileDir:"/tmp/"
+}))
 
 
 
